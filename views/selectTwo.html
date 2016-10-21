@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>selectTwo</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <style>
+        body{
+            font-size: 12px;
+            font-family: Arial;
+        }
+        a{
+            color: #999999;
+        }
+        a:hover{
+            text-decoration: none;
+            color: #c40000;
+        }
+       img.simpleLogo{
+           position: absolute;
+           width: 140px;
+           left: 10px;
+           top: 50px;
+       }
+        .simpleSearchDiv{
+            width: 300px;
+            height: 40px;
+            background-color: #c40000;
+            margin: 10px 20px 40px;
+        }
+        .simpleSearchDiv input{
+            width: 225px;
+            height: 34px;
+            border: 1px solid transparent;
+            margin: 2px;
+            outline: none;
+        }
+        .simpleSearchDiv button{
+            width: 60px;
+            border: 1px solid transparent;
+            background-color: #c40000;
+            color: white;
+            font-size: 14px;
+        }
+        .searchBelow{
+            margin-top: 3px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#nowhere">
+        <img src="http://how2j.cn/tmall/img/site/simpleLogo.png" class="simpleLogo" id="simpleLogo">
+    </a>
+    <form method="post">
+        <div class="simpleSearchDiv pull-right">
+            <input type="text" name="keyword" placeholder="平衡车 原汁机">
+            <button type="button" class="searchButton">搜天猫</button>
+            <div class="searchBelow">
+                <span>
+                        <a href="#nowhere">
+                            冰箱
+                        </a>
+                            <span>|</span>
+                    </span>
+                    <span>
+                        <a href="#nowhere">
+                            空调
+                        </a>
+                            <span>|</span>
+                    </span>
+                    <span>
+                        <a href="#nowhere">
+                            女表
+                        </a>
+                            <span>|</span>
+                    </span>
+                    <span>
+                        <a href="#nowhere">
+                            男表
+                        </a>
+                    </span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
