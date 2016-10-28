@@ -86,9 +86,35 @@
             top: 36px;
             z-index: -1;
         }
+
+        img.catear {
+            position: absolute;
+            height: 15px;
+            display: none;
+        }
     </style>
+    <script>
+        $(function () {
+            $(".rightMenu span").mouseenter(function () {
+                var left = $(this).position().left;
+                var top = $(this).position().top;
+                var width = $(this).css("width");
+                var destLeft = parseInt(left) + parseInt(width) / 2;
+                $("img#catear").css("left", destLeft)
+                $("img#catear").css("top", top - 20)
+                $("img#catear").fadeIn(500);
+            })
+
+            $("div.rightMenu span").mouseleave(function () {
+                $("img#catear").hide();
+            });
+        })
+    </script>
 </head>
 <body>
+<div style="height:50px"></div>
+<img class="catear" id="catear" src="http://how2j.cn/tmall/img/site/catear.png"
+     style="left: 260.5px; top: 159.65px; display: none;">
 <div class="categoryWithCarousel">
     <div class="headbar">
         <div class="head">
