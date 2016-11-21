@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算按钮</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-size: 12px;
+            font-family: Arial;
+        }
+
+        .cartDiv {
+            max-width: 1013px;
+            margin: 10px auto;
+            color: black;
+        }
+
+        .cartTitlePrice {
+            color: #C40000;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 5px;
+            margin-right: 3px;
+        }
+
+        .cartTitle button {
+            background-color: #AAAAAA;
+            border: 1px solid #AAAAAA;
+            color: white;
+            width: 53px;
+            height: 25px;
+            border-radius: 2px;
+        }
+
+        .cartFoot {
+            background-color: #E5E5E5;
+            line-height: 50px;
+            margin: 20px auto;
+            color: black;
+            padding-left: 20px;
+        }
+
+        .createOrderButton {
+            background-color: #AAAAAA;
+            border: 0px solid #AAAAAA;
+            color: white;
+            width: 120px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .selectAllItem {
+            cursor: pointer;
+        }
+
+        .cartSumNumber {
+            color: #C40000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cartSumPrice {
+            color: #C40000;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="cartDiv">
+    <div class="cartTitle pull-right">
+        <span>已选商品（不含运费）</span>
+        <span class="cartTitlePrice">￥0.00</span>
+        <button class="createOrderButton" style="background-color: rgb(170, 170, 170)" disabled="disabled">结算</button>
+    </div>
+    <div style="text-align: center;color:gray;line-height:100px">
+        订单项内容
+    </div>
+    <div class="cartFoot">
+        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="selectAllItem" selectit="false">
+        <span>全选</span>
+        <div class="pull-right">
+            <span>已选商品<span class="cartSumNumber">0</span>件</span>
+            <span>合计（不含运费）</span>
+            <span class="cartSumPrice">￥0.00</span>
+            <button class="createOrderButton" style="background-color: rgb(170, 170, 170);" disabled="disabled">结算
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

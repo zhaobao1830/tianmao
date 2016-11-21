@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结算页面的头部和收货地址</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <style>
+        .buyPageDiv {
+            margin: 20px auto;
+            max-width: 1013px;
+        }
+
+        .address {
+            margin: 20px 5px;
+            text-align: left;
+        }
+
+        .addressTip {
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .addressTable {
+            margin: 20px 20px;
+            width: 600px;
+            font-size: 12px;
+        }
+
+        .addressTable td {
+            color: #333333;
+            vertical-align: top;
+            padding-right: 5px;
+            text-align: left;
+            height: 30px;
+        }
+
+        .firstColumn {
+            width: 100px;
+        }
+
+        .addressTable td textarea {
+            border: 1px solid #AFAFAF;
+            margin-bottom: 10px;
+            width: 400px;
+        }
+
+        .addressTable td input {
+            border: 1px solid #AFAFAF;
+            width: 200px;
+        }
+
+        .redStar {
+            color: red;
+            font-size: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="buyPageDiv">
+    <div class="buyFlow">
+        <img src="http://how2j.cn/tmall/img/site/simpleLogo.png" class="pull-left">
+        <img src="http://how2j.cn/tmall/img/site/buyflow.png" class="pull-right">
+        <div style="clear:both"></div>
+    </div>
+    <div class="address">
+        <div class="addressTip">输入收货地址</div>
+        <div>
+            <table class="addressTable">
+                <tbody>
+                <tr>
+                    <td class="firstColumn">详细地址<span class="redStar">*</span></td>
+                    <td><textarea placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息" name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>邮政编码</td>
+                    <td><input type="text" placeholder="如果您不清楚邮递区号，请填写000000" name="post"></td>
+                </tr>
+                <tr>
+                    <td>收货人姓名<span class="redStar">*</span></td>
+                    <td><input type="text" placeholder="长度不超过25个字符" name="receiver"></td>
+                </tr>
+                <rr>
+                    <td>手机号码<span class="redStar">*</span></td>
+                    <td><input type="text" placeholder="请输入11位手机号码" name="mobile"></td>
+                </rr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

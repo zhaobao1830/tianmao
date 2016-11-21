@@ -45,14 +45,37 @@
         <img width="100px" class="bigImg" src="http://how2j.cn/tmall/img/productSingle/8619.jpg">
 
         <div class="smallImageDiv">
-            <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8620.jpg">
-            <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8619.jpg">
-            <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8618.jpg">
-            <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8617.jpg">
-            <img width="56px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8616.jpg">
+            <img width="100px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8620.jpg"
+                 bigImageURL="http://how2j.cn/tmall/img/productSingle/8620.jpg">
+            <img width="100px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8619.jpg"
+                 bigImageURL="http://how2j.cn/tmall/img/productSingle/8619.jpg">
+            <img width="100px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8618.jpg"
+                 bigImageURL="http://how2j.cn/tmall/img/productSingle/8618.jpg">
+            <img width="100px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8617.jpg"
+                 bigImageURL="http://how2j.cn/tmall/img/productSingle/8617.jpg">
+            <img width="100px" class="smallImage" src="http://how2j.cn/tmall/img/productSingle_small/8616.jpg"
+                 bigImageURL="http://how2j.cn/tmall/img/productSingle/8616.jpg">
         </div>
+        <div class="img4load hidden"></div>
     </div>
     <div style="clear:both"></div>
 </div>
+<script>
+    $(".smallImage").mouseover(function () {
+        var bigImageURL = $(this).attr("bigImageURL");
+        $("img.bigImg").attr("src", bigImageURL);
+    })
+    //预加载，不是很清楚
+    $(".bigImg").load(function () {
+        $(".smallImage").each(function () {
+            var bigImageURL = $(this).attr("bigImageURL");
+            img = new Image();
+            img.src = bigImageURL;
+            img.onload = function () {
+                $("div.img4load").append($(img));
+            }
+        })
+    })
+</script>
 </body>
 </html>

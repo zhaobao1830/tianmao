@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单标题部分</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <style>
+        .boughDiv {
+            width: 1013px;
+            margin: 10px auto;
+        }
+
+        .orderType div {
+            border-bottom: 2px solid #E8E8E8;
+            float: left;
+        }
+
+        .orderType a {
+            border-right: 1px solid #E8E8E8;
+            float: left;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+            padding: 0 20px;
+            text-decoration: none;
+        }
+
+        .orderType a:hover {
+            color: #c40000;
+            text-decoration: none;
+        }
+
+        .selectedOrderType {
+            border-bottom: 2px solid #C40000;
+        }
+
+        .selectedOrderType a {
+            color: #C40000;
+        }
+
+        div.orderTypeLastOne {
+            overflow: hidden;
+            /*隐藏滚动条*/
+            float: none !important;
+            /*取消浮动，就会自动出现在右边，并且把剩下的占满*/
+            border-bottom: 2px solid #E8E8E8;
+            /*下边框*/
+            height: 35px;
+            /*高度:35px*/
+        }
+
+        a.noRightborder {
+            border-right-width: 0px !important;
+            /*去掉右边框*/
+        }
+
+        .orderListTitleTable {
+            border: 1px solid #E8E8E8;
+            width: 100%;
+            margin: 20px 0px;
+            background-color: #F5F5F5;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .orderListTitleTable td {
+            padding: 12px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="boughDiv">
+    <div class="orderType">
+        <div class="selectedOrderType"><a href="#nowhere" orderstatus="all">所有订单</a></div>
+        <div><a href="#nowhere" orderstatus="waitPay">待付款</a></div>
+        <div><a href="#nowhere" orderstatus="waitDelivery">待发货</a></div>
+        <div><a href="#nowhere" orderstatus="waitConfirm">待收货</a></div>
+        <div><a class="noRightborder" href="#nowhere" orderstatus="waitReview">待评价</a></div>
+        <div class="orderTypeLastOne">
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="orderListTitle">
+        <table class="orderListTitleTable">
+            <tbody>
+            <tr>
+                <td>宝贝</td>
+                <td width="100px">单价</td>
+                <td width="100px">数量</td>
+                <td width="120px">实付款</td>
+                <td width="100px">交易操作</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

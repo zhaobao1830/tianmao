@@ -6,6 +6,41 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            var stock = 66;
+            $(".productNumberSetting").keyup(function () {
+                var num = $(".productNumberSetting").val()
+                num = parseInt(num)
+                if (isNaN(num)) {
+                    num = 1
+                }
+                if (num <= 0) {
+                    num = 1
+                }
+                if (num > stock) {
+                    num = stock
+                }
+                $(".productNumberSetting").val(num)
+            })
+            $(".increaseNumber").click(function () {
+                var num = $(".productNumberSetting").val()
+                num++
+                if (num > stock) {
+                    num = stock
+                }
+                $(".productNumberSetting").val(num)
+            })
+            $(".decreaseNumber").click(function () {
+                var num = $(".productNumberSetting").val()
+                num++
+                if (num <= 0) {
+                    num = 1
+                }
+                $(".productNumberSetting").val(num)
+            })
+        })
+    </script>
     <style>
         body {
             font-size: 12px;
@@ -158,12 +193,11 @@
             display: inline-block;
             width: 32px;
             height: 32px;
-            padding: 8px 0;
         }
 
         .productNumberSetting {
             border: 0;
-            height: 14px;
+            height: 30px;
             width: 30px;
         }
 
